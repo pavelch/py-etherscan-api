@@ -86,11 +86,12 @@ class Client(object):
         if req.status_code == 200:
             # Check for empty response
             if req.text:
-                if req.json()['status'] == '1':
-                    return req.json()
-                else:
-                    print(req.json()['message'])
-                    exit()
+                # if req.json()['status'] == '1':
+                #     return req.json()
+                # else:
+                #     print(req.json()['message'])
+                #     exit()
+                return req.json()
             else:
                 print("Invalid Request")
                 exit()
